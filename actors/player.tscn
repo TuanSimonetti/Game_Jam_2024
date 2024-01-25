@@ -72,18 +72,17 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
-position = Vector2(161, 188)
 script = ExtResource("1_c705e")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(-146, 37.5)
+position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_rd5uv")
 
 [node name="camera" type="Camera2D" parent="."]
 rotation_smoothing_enabled = true
 
 [node name="animation" type="AnimatedSprite2D" parent="."]
-position = Vector2(-146, 29)
+position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_6pngr")
 animation = &"jump"
 autoplay = "idle"

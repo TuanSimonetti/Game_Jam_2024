@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bq8cympuqgb2y"]
+[gd_scene load_steps=19 format=3 uid="uid://bq8cympuqgb2y"]
 
 [ext_resource type="Texture2D" uid="uid://d2lck3a38pbao" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_o5y12"]
 [ext_resource type="Texture2D" uid="uid://beqwk60dayepl" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_vs1lb"]
@@ -11,6 +11,7 @@
 [ext_resource type="Shader" path="res://shaders/clouds.gdshader" id="7_grh5h"]
 [ext_resource type="Texture2D" uid="uid://b48w2jvwx7o4l" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="8_f75w3"]
 [ext_resource type="Texture2D" uid="uid://dkjxf80e8l5wy" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="9_bdu53"]
+[ext_resource type="PackedScene" uid="uid://dn5f804tpgc1m" path="res://prefabs/moving_plataform.tscn" id="12_ryx6l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_agr37"]
 texture = ExtResource("1_o5y12")
@@ -1078,3 +1079,9 @@ position = Vector2(-4, 15)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_bdu53")
 centered = false
+
+[node name="moving_plataform" parent="." instance=ExtResource("12_ryx6l")]
+position = Vector2(588, 268)
+
+[node name="moving_plataform2" parent="." instance=ExtResource("12_ryx6l")]
+position = Vector2(740, 234)

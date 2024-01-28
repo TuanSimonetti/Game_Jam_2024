@@ -108,3 +108,13 @@ collision_mask = 4
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_o8y8v")
 debug_color = Color(0.92549, 0.25098, 0.278431, 0.419608)
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(13, 0)
+collision_mask = 4
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(-13, 0)
+collision_mask = 4

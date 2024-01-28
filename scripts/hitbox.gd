@@ -3,4 +3,5 @@ extends Area2D
 
 func _on_body_entered(body) -> void:
 	if body.name == "player":
-		print(body.name)
+		owner.anim.play("hurt")
+		owner.queue_free()

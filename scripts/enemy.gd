@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -400.0
 
 @onready var wall_detector := $wall_detector as RayCast2D
 @onready var texture := $texture as Sprite2D
+@onready var anim := $anim as AnimationPlayer
 
 var direction := -1
 
@@ -31,3 +32,8 @@ func _physics_process(delta):
 	
 
 	move_and_slide()
+
+
+func _on_anim_animation_finished(anim_name):
+	if anim_name == "hurt":
+		queue_free()

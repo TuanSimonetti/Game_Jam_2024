@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bq8cympuqgb2y"]
+[gd_scene load_steps=21 format=3 uid="uid://bq8cympuqgb2y"]
 
 [ext_resource type="Texture2D" uid="uid://d2lck3a38pbao" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_o5y12"]
 [ext_resource type="Texture2D" uid="uid://beqwk60dayepl" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_vs1lb"]
 [ext_resource type="Texture2D" uid="uid://cxv0pan4ectf7" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="3_5uhqg"]
+[ext_resource type="PackedScene" uid="uid://c3vros46lewx0" path="res://prefabs/coin.tscn" id="4_ep7r5"]
 [ext_resource type="PackedScene" uid="uid://bq1p2imnnihwn" path="res://actors/player.tscn" id="4_r8tkt"]
 [ext_resource type="Texture2D" uid="uid://cu0y4ck17guqw" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="5_lvl6l"]
 [ext_resource type="Shader" path="res://shaders/back_clouds.gdshader" id="6_6mb0g"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b48w2jvwx7o4l" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="8_f75w3"]
 [ext_resource type="Texture2D" uid="uid://dkjxf80e8l5wy" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="9_bdu53"]
 [ext_resource type="PackedScene" uid="uid://dn5f804tpgc1m" path="res://prefabs/moving_plataform.tscn" id="12_ryx6l"]
+[ext_resource type="PackedScene" uid="uid://ljoubohsp0ut" path="res://actors/enemy.tscn" id="14_2hjc7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_agr37"]
 texture = ExtResource("1_o5y12")
@@ -1023,6 +1025,29 @@ layer_1/tile_data = PackedInt32Array(1179648, 262144, 1, 1179649, 262144, 1, 117
 layer_2/name = "trees"
 layer_2/tile_data = PackedInt32Array(720917, 655361, 1, 786453, 655361, 2, 851989, 655361, 3, 720918, 720897, 1, 786454, 720897, 2, 851990, 65537, 5, 720922, 589825, 1, 786458, 589825, 2, 851994, 65537, 5, 720923, 655361, 1, 786459, 655361, 2, 851995, 655361, 3, 720924, 720897, 1, 786460, 720897, 2, 851996, 65537, 5, 1114131, 327681, 5, 1114132, 393217, 5, 1114133, 458753, 5, 1114134, 327681, 5, 1114135, 393217, 5, 1114136, 458753, 5, 1114137, 327681, 5, 1114138, 393217, 5, 1114139, 458753, 5, 1114140, 327681, 5, 1114141, 393217, 5, 1114142, 458753, 5, 1114143, 327681, 5, 1114144, 393217, 5, 1114145, 458753, 5, 851988, 65537, 5, 720904, 65537, 1, 786440, 65537, 2, 851976, 65537, 5, 720905, 131073, 1, 786441, 131073, 2, 851977, 131073, 3, 720906, 196609, 1, 786442, 196609, 2, 851978, 65537, 5, 720910, 65537, 1, 786446, 65537, 2, 851982, 65537, 5, 720911, 131073, 1, 786447, 131073, 2, 851983, 131073, 3, 720927, 589825, 1, 786463, 589825, 2, 720928, 655361, 1, 786464, 655361, 2, 852000, 655361, 3, 720929, 720897, 1, 786465, 720897, 2, 852001, 720897, 3, 720912, 196609, 1, 786448, 196609, 2, 851984, 65537, 5, 720916, 589825, 1, 786452, 589825, 2)
 
+[node name="coins" type="Node2D" parent="."]
+
+[node name="coin" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(151, 163)
+
+[node name="coin2" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(63, 183)
+
+[node name="coin3" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(245, 170)
+
+[node name="coin4" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(397, 202)
+
+[node name="coin5" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(591, 251)
+
+[node name="coin6" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(740, 213)
+
+[node name="coin7" parent="coins" instance=ExtResource("4_ep7r5")]
+position = Vector2(520, 195)
+
 [node name="player" parent="." instance=ExtResource("4_r8tkt")]
 position = Vector2(11, 239)
 
@@ -1085,3 +1110,11 @@ position = Vector2(588, 268)
 
 [node name="moving_plataform2" parent="." instance=ExtResource("12_ryx6l")]
 position = Vector2(740, 234)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="enemy" parent="Node2D" instance=ExtResource("14_2hjc7")]
+position = Vector2(254, 218)
+
+[node name="enemy2" parent="Node2D" instance=ExtResource("14_2hjc7")]
+position = Vector2(151, 214)
